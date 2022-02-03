@@ -10,12 +10,7 @@ public class Ejercicio17 {
         System.out.println("Cuantas columnas tendra la matriz?");
         int columnas = sc.nextInt();
         int matriz[][] = new int[filas][columnas];
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                System.out.println("Introduzca el valor de la posicion " + i + "," + j);
-                matriz[i][j] = sc.nextInt();
-            }
-        }
+        matriz = recorrermatriz(filas, columnas, matriz, sc);
         mostrarmatriz(matriz);
     }
     public static void mostrarmatriz(int matriz[][]){
@@ -26,5 +21,13 @@ public class Ejercicio17 {
             System.out.println();
         }
     }
-
+    public static int [][] recorrermatriz (int n, int m, int matriz[][], Scanner sc){
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < m; j++){
+                System.out.println("Introduzca el valor de la posicion " + i + "," + j);
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+        return matriz;
+    }
 }
