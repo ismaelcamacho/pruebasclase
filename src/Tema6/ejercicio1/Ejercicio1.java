@@ -14,7 +14,7 @@ public class Ejercicio1 {
             arrayAlumnos[i] = new Alumno(nombre, notaMedia);
         }
         for (int i=0; i<arrayAlumnos.length; i++){
-            System.out.println(arrayAlumnos.toString());
+            System.out.println(arrayAlumnos);
         }
     }
 }
